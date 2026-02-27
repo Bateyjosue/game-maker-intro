@@ -1,3 +1,10 @@
+if (finished) {
+    // keep the player frozen (optional)
+    x_speed = 0;
+    y_speed = 0;
+    exit;
+}
+
 x_speed = 0;
 y_speed += grav;
 
@@ -13,8 +20,8 @@ move_and_collide(x_speed, y_speed, oSolid);
 
 if(place_meeting(x, y+1, oSolid)){
 	if(keyboard_check_pressed(vk_up)){
-		y_speed=-10;
-		x_speed = movement_speed + 2;
+		y_speed=-7;
+		//x_speed = movement_speed + 2;
 	} else {
 		y_speed=0;
 	}
